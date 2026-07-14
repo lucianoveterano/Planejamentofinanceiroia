@@ -1,75 +1,38 @@
-# React + TypeScript + Vite
+# Proposta: Guia do Futuro – Educador Financeiro Inteligente
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o desenho do **Guia do Futuro**, um Educador Financeiro Inteligente projetado sob medida para universitários de 21 anos que vivem com R$ 700,00 por mês. O foco é transformar cada centavo em tranquilidade no presente e crescimento para o futuro, usando uma linguagem leve e sem jargões complicados.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 1. Painel Simples de Gastos
 
-## React Compiler
+Uma tela inicial intuitiva (Dashboard) que divide a sua renda em três grandes blocos de "potes" virtuais:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Obrigatório (50% ou R$ 350,00):** Para pagar contas essenciais, como transporte, xerox e livros.
+- **Livre/Lazer (30% ou R$ 210,00):** Para usar como quiser, incluindo aquele lanche ou saída com os amigos.
+- **Investimento no Futuro (20% ou R$ 140,00):** O seu "Fundo de Sonhos", usado para uma reserva ou um curso de qualificação.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 2. Alertas de Despesas Exageradas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+O sistema envia notificações amigáveis e visuais caso você ultrapasse os limites definidos para o mês:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Alerta Amarelo:** "Ops! Você já gastou 80% do seu pote de lazer. Que tal dar uma pausa nos pedidos de delivery esta semana?"
+- **Alerta Vermelho:** "Cuidado! Os gastos passaram do limite do seu pote de obrigação. Vamos revisar o extrato juntos?"
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
-```
+## 3. Recomendações Personalizadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Dicas práticas e adaptadas aos seus 21 anos e ao orçamento de R$ 700,00:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Lista de Ações Práticas:**
+  - Priorize o uso do Restaurante Universitário (RU) para economizar no almoço.
+  - Leve garrafinha de água e lanches rápidos de casa para evitar compras na cantina.
+  - Use aplicativos de transporte apenas quando necessário ou divida as corridas com amigos.
+  - Crie o hábito de investir R$ 50,00 por mês em títulos públicos simples ou CDBs para aprender na prática sobre juros a seu favor.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
-```
+## Ideias para um Projeto Frontend Interativo
