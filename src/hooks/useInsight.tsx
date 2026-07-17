@@ -34,6 +34,7 @@ export const useInsight = (id: string) => {
       }
 
       isRequestPending.current = true
+      // eslint-disable-next-line prettier/prettier
       setIsLoading(true)
       setError(null)
 
