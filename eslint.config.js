@@ -9,14 +9,27 @@ import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores([
+    'dist',
+    'node_modules',
+    'build',
+    'coverage',
+    '*.min.js',
+    '.vscode',
+    '.idea',
+    '.DS_Store',
+    'pnpm-lock.yaml',
+    'package-lock.json',
+    'yarn.lock',
+  ]),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{ts,tsx,js,jsx}'],
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
+      eslintConfigPrettier,
     ],
     plugins: {
       prettier: prettierPlugin,
@@ -44,7 +57,10 @@ export default defineConfig([
           argsIgnorePattern: '^_',
         },
       ],
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
     },
   },
-  eslintConfigPrettier,
 ])
